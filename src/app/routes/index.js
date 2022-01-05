@@ -1,7 +1,9 @@
-const app = require('../../api')
+const api = require('../../api')
 
-const MainRouter = require('./MainRouter');
+const MainRouter = require('./MainRoutes');
+const UserRoutes = require('./UserRoutes');
 
-module.exports = (app) => {
-    app.use(MainRouter);
+module.exports = (api) => {
+    api.use(MainRouter);
+    api.use(UserRoutes);
 }
