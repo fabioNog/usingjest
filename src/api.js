@@ -13,12 +13,12 @@ class App{
     }
 
     middlewares(){
-        this.express.use(express.json)
+        this.express.use(express.json())
     }
 
 
     routes(){
-            require('./app/routes')(this.express)
+        require('./app/routes/index.js')(this.express)
     }
 }
 
